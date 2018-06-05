@@ -1,0 +1,70 @@
+<!doctype html>
+<html ng-app="firstApp">
+<head>
+  <meta charset="utf-8">
+	<script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+  <script src="js/firstApp.js"></script>
+</head>
+<body ng-controller="firstCtrl">
+    <h1>{{title}}</h1>
+	<h5>Adultes: {{totalA}}</h5>
+	<h5>Enfants: {{totalE}}</h5>
+	<h3 style="color:#ED002F">Total: {{ getTotal() }}</h3>
+	<hr>
+  <h6>Filtres</h6>
+  <input type="button" value="Nom" ng-click="orderByMe('nom')">
+  <input type="button" value="Date" ng-click="orderByMe('tps')">
+  <p>Nom commençant par <input type="text" ng-model="searchName"></p>
+  <hr>
+  <table border="1" width="100%">
+  <tr>
+    <th ng-click="orderByMe('tps')"><p style="color: #B9121B; cursor: pointer">Date</p></th>
+    <th ng-click="orderByMe('nom')"><p style="color: #B9121B; cursor: pointer">Nom</p></th>
+    <th><p style="color: #737D75">Email / Commentaire</p></th>
+    <th>
+        <p style="color: #737D75">Brunch</p>
+
+    </th>
+    <th><p style="color: #737D75">Nb Adulte</p></th>
+    <th><p style="color: #737D75">Nb Enfant</p></th>
+    <th>Action</th>
+  </tr>
+  <tr ng-repeat="r in reservation | UserFilter:searchName | orderBy:myOrderBy">
+     <th>{{r.date}}</th>
+	   <th><h3 style="cursor:pointer; color:#5A73ED" ng-click="editReservation(r)">{{r.nom}}</h3></th>
+	   <th><h4>{{r.email}}</h4><span style="font-size:12px; color: #5B605C;">{{r.commentaire}}</span></th>
+	   <th>
+       <h5>{{r.brunch}}</h5>
+     </th>
+	   <th>
+       <h5 ng-show="!editMode || r.$id !== oldReserv.$id">{{r.adulte}}</h5>
+     	 <input style="width: 40px" type="text" value="{{r.adulte}}" onkeyup="this.value=this.value.replace(/[^\d]/,'')" ng-model="oldReserv.adulte" ng-show="editMode && r.$id === oldReserv.$id">
+
+     </th>
+	   <th>
+       <h5 ng-show="!editMode || r.$id !== oldReserv.$id">{{r.enfant}}</h5>
+     	<input style="width: 40px" type="text" value="{{r.enfant}}" onkeyup="this.value=this.value.replace(/[^\d]/,'')" ng-model="oldReserv.enfant" ng-show="editMode && r.$id === oldReserv.$id">
+     </th>
+     <th>
+       <button ng-click="updateReservation(oldReserv)" ng-show="editMode && r.$id === oldReserv.$id">Enr</button>
+     	 <button ng-click="cancelEdit()" ng-show="editMode && r.$id === oldReserv.$id">Ann</button>
+     	 <button ng-click="supprimer(r.$id)" ng-show="editMode && r.$id === oldReserv.$id">Supp</button>
+     </th>
+	</tr>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th><h2 style="color: #01B0F0">{{totalA}}</h2></th>
+    <th><h2 style="color: #01B0F0">{{totalE}}</h2></th>
+    <th></th>
+  </tr>
+  </table>
+	<h2 style="color:#ED002F">Total: {{ totaux }}</h2>
+
+</body>
+</html>

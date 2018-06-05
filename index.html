@@ -1,0 +1,717 @@
+<!doctype html>
+<html ng-app="firstApp" lang="en">
+	<head>
+
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<meta name="keywords" content="Site Mariage Quentin Carmen" />
+		<meta name="description" content="Site Mariege de Quentin et Carmen">
+		<meta name="author" content="ggervat">
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+		<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+
+
+		<!-- Page Title -->
+		<title>Mariage de Quentin Et Carmen</title>
+
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Favicon -->
+		<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="vendor/owlcarousel/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="vendor/owlcarousel/css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="vendor/animate_css/animate.css">
+		<link rel="stylesheet" href="vendor/magnific-popup/css/magnific-popup.css">
+		<link rel="stylesheet" href="vendor/vegas/dist/vegas.min.css">
+
+		<!-- Fonts CSS -->
+		<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body ng-controller="firstCtrl">
+		<!-- Page Loader Animation
+		<div id="loader">
+			<div class="container loader-img-holder text-center">
+				<img class="img-fluid" src="img/loader.svg" alt="">
+			</div>
+		</div> Page Loader Animation End-->
+
+		<!-- slider Section -->
+		<section id="slider">
+			<div class="holder-caption">
+				<div class="container relative-z">
+					<div class="row">
+						<div class="col col-lg-12 align-self-center">
+							<h1>Wedding</h1>
+							<div class="slider-text-holder">
+								<h1>Quentin & Carmen</h1>
+								<p>08. Sept. 2018</p>
+							</div>
+
+							<div class="justify-content-lg-center counter">
+								<div id="countdown"></div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="slider-scroll">
+					<a class="scroll-link" href="#about">
+						<i class="fa fa-angle-down fade-down"></i>
+					</a>
+				</div>
+				<div class="img-overlay"></div>
+			</div>
+		</section>
+		<!-- slider Section End -->
+
+		<!-- Sticky Menu -->
+		<header id="nav-holder">
+			<nav id="primary-navbar" class="navbar navbar-expand-lg navbar-light bg-white">
+				<div class="container">
+					<a class="navbar-brand" href="#">
+						Quentin<span class="custom-color">&</span>Carmen
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto menu-right">
+							<li class="nav-item">
+								<a class="nav-link" href="#slider">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#reserv">Confirmation</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#event">Les lieux</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#peoples">Les témoins</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#portfolio">Photos</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#livreor">Livre d'or</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!-- Sticky Menu End -->
+
+		<!-- About Section -->
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h2 class="big-heading mt-0 mt-0">Les futurs<span class="custom-color"> Mariés</span></h2>
+						<img class="headline_1" src="img/headline_simple.svg" alt="">
+						<p class="sub-heading col-lg-8 offset-lg-2 margin-b-5">Nous sommes heureux de vous inviter à notre mariage !<br> Vous trouverez sur ce site l’ensemble des informations nécessaires pour que vous puissiez nous honorer de votre présence durant ce jour spécial.<br>On compte sur vous !</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 text-center margin-xs-b-2 margin-sm-b-2">
+						<figure>
+							<img src="img/quentin1.jpg" alt="quentinphoto" class="img-fluid rounded-circle">
+						</figure>
+						<div class="about-content col-sm-8 offset-sm-2">
+							<h4>Quentin
+								<span class="custom-color">D.</span>
+							</h4>
+							<p>Blablabla</p></div>
+					</div>
+					<div class="col-lg-6 text-center">
+						<figure>
+							<img src="img/carmen1.jpg" alt="photocarmen" class="img-fluid rounded-circle">
+						</figure>
+						<div class="about-content col-sm-8 offset-sm-2">
+							<h4>Carmen
+								<span class="custom-color">G.</span>
+							</h4>
+							<p>Blablablabla</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- About Section End -->
+		<!-- Footer RSVP -->
+		<section id="reserv" class="relative-z">
+			<div id="rsvp" class="container relative-z">
+				<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="big-heading mt-0 mt-0">
+						<span class="custom-color">C</span>onfirmation
+					</h2>
+					<img class="headline_1" src="img/headline_simple.svg" alt="">
+					<p class="sub-heading col-lg-8 offset-lg-2 margin-b-5">Afin de que tout soit prêt le jour J, nous avons besoin de la confirmation de votre venue avant le 31 mai.</p>
+				</div>
+			</div>
+				<div class="row">
+					<div class="form-success col-md-12 text-center">
+						<h2 class=" section-heading mt-0 mb-04"><span class="custom-color">Thank</span> You!</h2>
+					</div>
+					<div class="form-error col-md-12 text-center">
+						<h2 class=" section-heading mt-0 mb-04"><span class="custom-color">O</span>oops!</h2>
+						<p>Something wrong. Please refresh your browser and try again!</p>
+					</div>
+				</div>
+				<div class="col-md-10 offset-md-1 text-left">
+					<form ng-submit="addReservation(newReservation)">
+						<div class="row">
+							<div class="form-group col-md-6">
+								<label for="name">Nom</label>
+								<input type="text" ng-model="newReservation.nom" class="form-control" id="name" name="name" required />
+							</div>
+							<div class="form-group col-md-6">
+								<label for="email">Email</label>
+								<input type="email" ng-model="newReservation.email" class="form-control" id="email" name="email" required />
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-6">
+								<label for="guest">Nombre d'accompagnants adultes (vous compris)</label>
+								<select class="form-control" data-ng-options="o.value for o in optionNumber" data-ng-model="selectedOptionNumberA" rows="1" name="adulte"></select>
+							</div>
+							<div class="form-group col-md-6">
+								<label for="attend">Des enfants ? Si oui combien ?</label>
+								<select class="form-control" data-ng-options="o.value for o in optionNumber" data-ng-model="selectedOptionNumberE" rows="1" name="enfant"></select>
+							</div>
+						</div><div class="row">
+							<div class="form-group col-md-12 margin-b-2">
+								<label for="message">Un brunch est organisé le dimanche, souhaitez vous être présent ?</label>
+								<select class="form-control" data-ng-options="o.name for o in options" data-ng-model="selectedOption" rows="1" name="message"></select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-12 margin-b-2">
+								<label for="message">Message</label>
+								<textarea ng-model="newReservation.commentaire" class="form-control" id="message" rows="5" name="message"></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-12 text-center">
+								<input type="submit" class="button-medium btn btn-default fill-btn" value="Je confirme ma présence">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<!-------------------------------------->
+
+			<div class="container" id="sendYou" style="display: none">
+
+				<div class="row">
+					<div class="col-lg-6 text-center margin-xs-b-2 margin-sm-b-2">
+						<figure>
+							<img src="img/quentin1.jpg" alt="quentinphoto" class="img-fluid rounded-circle">
+						</figure>
+						<div class="about-content col-sm-8 offset-sm-2">
+							<h4>Quentin
+								<span class="custom-color">D.</span>
+							</h4>
+							<p>Merci</p></div>
+					</div>
+					<div class="col-lg-6 text-center">
+						<figure>
+							<img src="img/carmen1.jpg" alt="photocarmen" class="img-fluid rounded-circle">
+						</figure>
+						<div class="about-content col-sm-8 offset-sm-2">
+							<h4>Carmen
+								<span class="custom-color">G.</span>
+							</h4>
+							<p>A bientôt</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!----------------------------------------->
+
+
+			<div class="img-overlay"></div>
+		</section>
+		<!-- Footer RSVP End -->
+
+		<!-- Event Section -->
+		<section id="event">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h2 class="big-heading mt-0 mt-0">
+							<span class="custom-color">Les</span> Lieux
+						</h2>
+						<img class="headline_1" src="img/headline_simple.svg" alt="">
+						<p class="sub-heading col-lg-8 offset-lg-2 margin-b-5">Rendez vous au Château de Villiers pour fêter ensemble ce jour inoubliable !</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 pr-70 text-right order-1 main-order-xs-2 main-order-sm-2">
+						<img src="img/chateau1.jpg" alt="">
+					</div>
+					<div class="col-md-6 pl-70 order-2 main-order-xs-1 main-order-sm-1 margin-sm-b-2">
+						<div class="panel-group line" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-default active">
+								<a class="panel-link" data-toggle="collapse" data-parent="#accordion" href="#collapse_1" aria-expanded="true" aria-controls="collapse_1">
+									<div class="panel-heading" id="headingOne">
+										<div class="panel-number">1</div>
+										<h5 class="panel-title">La cérémonie</h5>
+									</div>
+								</a>
+								<div id="collapse_1" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne">
+									<div class="panel-body">
+										<p>Nous vous attendons à la mairie de Sées (Orne) à 15h le 08 septembre 1, rue du Vivier à Sées. </p>
+										<a class="link popup-gmaps" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.581087237902!2d-74.24110538432045!3d40.81519843923193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ4JzU0LjciTiA3NMKwMTQnMjAuMSJX!5e0!3m2!1sen!2sus!4v1512389015359">
+											<span class="custom-color">
+												<i class="fa fa-map-marker"></i>
+											</span>Voir le lieu sur la carte.
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<a class="panel-link" data-toggle="collapse" data-parent="#accordion" href="#collapse_2" aria-expanded="true" aria-controls="collapse_2">
+									<div class="panel-heading" id="headingTwo">
+										<div class="panel-number">2</div>
+										<h5 class="panel-title">Le vin d'honneur</h5>
+									</div>
+								</a>
+								<div id="collapse_2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+									<div class="panel-body">
+										<p>La fête ne fera que commencer avec un vin d’honneur !</p>
+										<a class="link popup-gmaps" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.5673598035964!2d-74.22810068432045!3d40.81550003921357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ4JzU1LjgiTiA3NMKwMTMnMzMuMyJX!5e0!3m2!1sen!2sus!4v1512389177460">
+											<span class="custom-color">
+												<i class="fa fa-map-marker"></i>
+											</span>Voir le lieu sur la carte.
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="panel panel-default">
+								<a class="panel-link" data-toggle="collapse" data-parent="#accordion" href="#collapse_3" aria-expanded="true" aria-controls="collapse_3">
+									<div class="panel-heading" id="headingThree">
+										<div class="panel-number">3</div>
+										<h5 class="panel-title">La réception</h5>
+									</div>
+								</a>
+								<div id="collapse_3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+									<div class="panel-body">
+										<p>La réception commencera à 18h30 au <a href="http://http://www.chateau-normandie.com/">Château de Villiers à Essay.</a></p>
+										<a class="link popup-gmaps" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.6815553090073!2d-74.24765468432048!3d40.81299103936746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ4JzQ2LjgiTiA3NMKwMTQnNDMuNyJX!5e0!3m2!1sen!2sus!4v1512389284031">
+											<span class="custom-color">
+												<i class="fa fa-map-marker"></i>
+											</span>Voir le lieu sur la carte.
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Event Section End -->
+		<!-- Comment Section -->
+		<section id="comment">
+			<div class="container relative-z">
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1">
+						<div id="comment-carousel" class="owl-carousel owl-theme">
+							<div class="item">
+								<h3 class="heading text-center">Nous vous proposons une liste non exhaustive des (nombreuses !) possibilités d’hébergement.</h3>
+							</div>
+							<div class="item">
+								<h3 class="heading text-center">Celui qui conduit ne boit pas !</h3>
+							</div>
+							<div class="item">
+								<h3 class="heading text-center">Pour les plus motivés et/ou alcoolisés, vous pouvez également ramener un matelas et un duvet. On trouvera une petite place au fond du grenier.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="img-overlay"></div>
+		</section>
+		<!-- Comment Section End -->
+		<!-- Gift Section -->
+		<section>
+			<div class="container">
+				<div class="row"><div id="gift-carousel" class="owl-carousel owl-theme">
+					<div class="item">
+						<i class="fa fa-home"></i>
+						<h4>Hôtel</h4>
+						<p><a href="http://www.hotelrestaurantsees.com/" target="_blank">Hôtel le Dauphin</a><br>Sées (61)</p>
+					</div>
+					<div class="item">
+						<i class="fa fa-home"></i>
+						<h4>Hôtel</h4>
+						<p><a href="http://www.ile-sees.fr/" target="_blank">L’Ile de Sées</a><br>Macé (61)</p>
+					</div>
+					<div class="item">
+						<i class="fa fa-bed"></i>
+						<h4>Chambre d'hôte</h4>
+						<p><a href="http://www.fedestertres.com/" target="_blank">Ferme des Tertres</a><br>La Chapelle-près-Sées (61)</p>
+					</div>
+					<div class="item">
+						<i class="fa fa-bed"></i>
+						<h4>Chambre d'hôte</h4>
+						<p><a href="http://www.melisane.fr/" target="_blank">Mélisâne</a><br>Le Bouillon (61)</p>
+					</div>
+					<div class="item">
+						<i class="fa fa-bed"></i>
+						<h4>Chambre d'hôte</h4>
+						<p><a href="http://lafoleterie.fr/" target="_blank">La Foleterie</a><br>Trémont (61)</p>
+					</div>
+					<div class="item">
+						<i class="fa fa-bed"></i>
+						<h4>Chambre d'hôte</h4>
+						<p><a href="https://www.airbnb.fr/rooms/7830622" target="_blank">Manoir le Crocq</a><br>Colombiers (61)</p>
+					</div>
+					<div class="item">
+						<i class="fa fa-bed"></i>
+						<h4>Chambres d’hôtes</h4>
+						<p><a href="http://www.chateau-de-sarceaux.com/" target="_blank">Château de Sarceaux</a><br>Valframbert (61)</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Gift Section End -->
+			<!-- VIP Section Start -->
+		<i id="people"></i>
+		<section id="peoples">
+			<div class="container relative-z">
+				<div class="">
+					<div class="col-lg-12 text-center">
+						<h2 class="big-heading mt-0 mt-0">
+							Important <span class="custom-color">People</span>
+						</h2>
+						<img class="headline_1" src="img/headline_simple.svg" alt="">
+						<p class="sub-heading-white col-lg-8 offset-lg-2 margin-b-5">Vous pouvez les contacter en cas de besoin</p>
+					</div>
+					<div class="">
+					</div>
+						<div class="row col-lg-12 text-center">
+							<div class="col col-lg-6 text-center">
+								<h4 class="margin-b-2">Les témoins de Carmen</h4>
+								<div class="people-img text-center ml-0">
+									<img class="" src="img/temoin1.jpg" alt="">
+									<p class="sub-vip-white">Geraldine R.</p>
+									<p class="sub-tel-white-opacity">+51 989 799 520</p>
+								</div>
+								<div class="people-img text-center">
+									<img class="" src="img/temoin2.jpg" alt="">
+									<p class="sub-vip-white">Manon M.</p>
+									<p class="sub-tel-white-opacity">+33 6 98 08 86 49</p>
+								</div>
+
+							</div>
+							<div class="col col-lg-6 text-center">
+								<h4 class="margin-b-2">Les témoins de Quentin</h4>
+								<div class="people-img text-center ml-0">
+									<img class="" src="img/temoin3.jpg" alt="">
+									<p class="sub-vip-white">Guillaume G.</p>
+									<p class="sub-tel-white-opacity">+33 7 61 19 10 84</p>
+								</div>
+								<div class="people-img text-center">
+									<img class="" src="img/temoin4.jpg" alt="">
+									<p class="sub-vip-white">Julien R.</p>
+									<p class="sub-tel-white-opacity">+33 6 11 11 11 11</p>
+								</div>
+							</div>
+						<!-- <div id="comment-carousel" class="owl-carousel owl-theme">
+							<div class="item">
+								<h3 class="heading text-center">Nous vous proposons une liste non exhaustive des (nombreuses !) possibilités d’hébergement.</h3>
+							</div>
+							<div class="item">
+								<h3 class="heading text-center">Celui qui conduit ne boit pas !</h3>
+							</div>
+							<div class="item">
+								<h3 class="heading text-center">Pour les plus motivés et/ou alcoolisés, vous pouvez également ramener un matelas et un duvet. On trouvera une petite place au fond du grenier.</h3>
+							</div>
+						</div>-->
+					</div>
+				</div>
+			</div>
+			<div class="img-overlay"></div>
+		</section>
+				<!-- VIP Section END -->
+
+		<!-- Portfolio Section -->
+		<section id="portfolio">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h2 class="big-heading mt-0 mt-0">
+							<span class="custom-color">Les</span> Photos
+						</h2>
+						<img class="headline_1" src="img/headline_simple.svg" alt="">
+						<p class="sub-heading col-lg-8 offset-lg-2 margin-b-5">Vous trouverez ici, peu de temps <strong>après</strong> le mariage, les magnifiques photos de notre photographe que nous vous mettrons à disposition.<br> Souriez, vous êtes photographiés !</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Portfolio Nav
+			<div class="container-fluid">
+				<div class="no-margin">
+					<div class="button-group filters-button-group margin-b-4">
+						<button class="button is-checked" data-filter="*">All</button>
+						<button class="button" data-filter=".wedding">Wedding</button>
+						<button class="button" data-filter=".party">Party</button>
+						<button class="button" data-filter=".videos">Videos</button>
+					</div>
+				</div> -->
+				<!-- Portfolio Nav End -->
+
+				<!-- Portfolio Images -->
+				<div class="row grid">
+					<div class="grid-item popup-gallery col-lg-3 col-md-6 col-sm-12 party transition" data-category="transition">
+						<div class="item">
+							<a href="img/port1.jpg">
+								<div class="thumbnail-overlay">
+									<img class="img-fluid" src="img/port1-min.jpg" alt="">
+									<span class="thumbnail-title">
+										<i class="fa fa-search-plus"></i>
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="grid-item popup-gallery col-lg-3 col-md-6 col-sm-12 wedding transition" data-category="transition">
+						<div class="item">
+							<a href="img/port2.jpg">
+								<div class="thumbnail-overlay">
+									<img class="img-fluid" src="img/port2-min.jpg" alt="">
+									<span class="thumbnail-title">
+										<i class="fa fa-search-plus"></i>
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="grid-item popup-gallery col-lg-3 col-md-6 col-sm-12 party transition" data-category="transition">
+						<div class="item">
+							<a href="img/port3.jpg">
+								<div class="thumbnail-overlay">
+									<img class="img-fluid" src="img/port3-min.jpg" alt="">
+									<span class="thumbnail-title">
+										<i class="fa fa-search-plus"></i>
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="grid-item popup-gallery col-lg-3 col-md-6 col-sm-12 wedding transition" data-category="transition">
+						<div class="item">
+							<a href="img/port4.jpg">
+								<div class="thumbnail-overlay">
+									<img class="img-fluid" src="img/port4-min.jpg" alt="">
+									<span class="thumbnail-title">
+										<i class="fa fa-search-plus"></i>
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Portfolio Section End -->
+		<!-- Sticky Menu End -->
+
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+
+
+							<div class="comment margin-b-5">
+								<h4 class="font-weight-light">
+									<i class="fa fa-comments-o d-inline mr-3 comment-icon"></i>Livre d'or
+								</h4>
+								<hr class="margin-b-2">
+								<ul class="list-unstyled">
+									<li class="media">
+										<img class="d-flex comment-img" src="img/imgcomment.jpg" alt="comment img">
+										<div class="media-body comment-content">
+											<h5 class="mt-0 font-weight-light d-block">Quentin & Carmen
+											</h5>
+											<p>Après le mariage vous pourrez nous laisser un petit mot que nous lirons avec attention et bonheur..</p>
+											<span class="commented-date">May 13, 2018 at 5:48 pm</span>
+										</div>
+									</li>
+
+
+							<div id="livreor"class="comment-form">
+								<h4 class="font-weight-light">
+									<i class="fa fa-commenting-o d-inline mr-3 comment-icon"></i>Laissez nous un mot
+								</h4>
+								<hr>
+								<form>
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label for="post-name">Nom</label>
+											<input type="text" class="form-control" id="post-name" name="post-name" required />
+										</div>
+										<div class="form-group col-md-6">
+											<label for="post-email">Email</label>
+											<input type="email" class="form-control" id="post-email" name="post-email" required/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-12 margin-b-2">
+											<label for="post-message">Message</label>
+											<textarea class="form-control" id="post-message" rows="5" name="post-message"></textarea>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-12 text-left mb-0">
+											<button type="text" class="button-medium btn btn-default fill-btn">Envoyer le message</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</article><!-- Post Article End-->
+
+					</div><!-- col-lg-12 End -->
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<!-- Footer Bottom -->
+		<div id="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 justify-content-center">
+						<p>G.GERVAT &copy; Copyright 2018, All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer Bottom End -->
+
+		<!-- Scroll Up -->
+		<div class="scrollup">
+			<i class="fa fa-angle-up" aria-hidden="true"></i>
+		</div>
+		<!-- Scroll Up End -->
+
+		<!-- Frameworks -->
+		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Plugins -->
+		<script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+		<script src="vendor/vegas/dist/vegas.min.js"></script>
+	<!--	<script src="vendor/jquery-validation/js/jquery.validate.min.js"></script>-->
+		<script src="vendor/waypoint/js/jquery.waypoints.min.js"></script>
+		<script src="vendor/isotope/js/isotope.pkgd.min.js"></script>
+		<script src="vendor/magnific-popup/js/jquery.magnific-popup.min.js"></script>
+		<script src="vendor/owlcarousel/js/owl.carousel.min.js"></script>
+		<script src="vendor/countup/js/countUp.min.js"></script>
+		<script src="vendor/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+
+		<script src="js/main.js"></script>
+		<script src="js/firstApp.js"></script>
+
+		<!-- Google Map Settings-->
+		<!--<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>-->
+		<script>
+
+			// Add the map center coordinate
+			var center = {lat: 40.815182, lng: -74.238908};
+
+			var map = new google.maps.Map(document.getElementById('map'),
+				{
+					zoom: 15,
+					center: center
+				}
+			);
+
+			function addMarker(markers){
+
+				var marker = new google.maps.Marker({
+						position: markers.coordinate,
+						map: map,
+						label: markers.number,
+						animation: google.maps.Animation.DROP,
+						icon: markers.icon
+					})
+
+				var infowindow = new google.maps.InfoWindow({
+	          			content: markers.infowindow
+	       			});
+
+
+	       		marker.addListener('click', function() {
+		        	infowindow.open(map, marker);
+		        });
+
+
+			}
+
+			// Add the markers to the Map
+			addMarker({
+				coordinate:{lat: 40.815182, lng: -74.238908},
+				infowindow:'<div id="content">'+
+	            '<h4 class="font-weight-light"><span class="custom-color">First</span> Point</h4>'+
+	            '<div class="map-info-content">'+
+	            '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, vitae, minima blanditiis inventore ea eum?</p>'+
+	            '</div>'+
+	            '</div>',
+				icon: "img/map_marker.png",
+
+
+
+			});
+
+			addMarker({
+				coordinate:{lat: 40.815496, lng: -74.225912},
+				infowindow:'<div id="content">'+
+	            '<h4 class="font-weight-light"><span class="custom-color">Second</span> Point</h4>'+
+	            '<div class="map-info-content">'+
+	            '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, vitae, minima blanditiis inventore ea eum?</p>'+
+	            '</div>'+
+	            '</div>',
+				icon: "img/map_marker.png",
+			});
+
+			addMarker({
+				coordinate:{lat: 40.812987, lng: -74.245466},
+				infowindow:'<div id="content">'+
+	            '<h4 class="font-weight-light"><span class="custom-color">Third</span> Point</h4>'+
+	            '<div class="map-info-content">'+
+	            '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, vitae, minima blanditiis inventore ea eum?</p>'+
+	            '</div>'+
+	            '</div>',
+				icon: "img/map_marker.png",
+			});
+
+
+		</script>
+		<!-- Google Map Settings End -->
+
+	</body>
+</html>
