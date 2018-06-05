@@ -364,37 +364,38 @@ $(document).ready(function() {
 			$( ".loader").show();
 
 			// ajax request
-	//		$.ajax({
-//				type: "POST",
-//				data: data,
-//				dataType: "json",
-	//			success: function (data) {
+			$.ajax({
+				type: "POST",
+				url: "sender.php",
+				data: data,
+				dataType: "json",
+				success: function (data) {
 
 					// if send data successfull
-	//				if(data.status === 'success'){
+					if(data.status === 'success'){
 
-	//					$( ".loader").hide();
-	//					$( form ).fadeOut( "slow" );
-	//					setTimeout(function() {
-	//						$( ".form-success").show( "slow" );
-	//					}, 300);
+						$( ".loader").hide();
+						$( form ).fadeOut( "slow" );
+						setTimeout(function() {
+							$( ".form-success").show( "slow" );
+						}, 300);
 
 					// if send data something wrong
-//					}else if(data.status === 'error'){
+					}else if(data.status === 'error'){
 
-//						$( ".loader").hide();
-//						$( form ).fadeOut( "slow" );
-//						setTimeout(function() {
-//							$( ".form-error").show( "slow" );
-//						}, 300);
-//					}
-//
-//				}
-//			});
-//			return false;
-//		}
+						$( ".loader").hide();
+						$( form ).fadeOut( "slow" );
+						setTimeout(function() {
+							$( ".form-error").show( "slow" );
+						}, 300);
+					}
 
-//	});
+				}
+			});
+			return false;
+		}
+
+	});
 
 
-//});
+});

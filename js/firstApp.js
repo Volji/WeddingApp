@@ -75,13 +75,34 @@ firstApp.controller('firstCtrl', function ($scope, $firebaseArray) {
 		$scope.newReservation.adulte = $scope.selectedOptionNumberA.value;
 		$scope.newReservation.enfant = $scope.selectedOptionNumberE.value;
 		$scope.reservation.$add(newReservation);
+		var data = {
+    	name: $scope.newReservation.nom,
+    	email: $scope.newReservation.email,
+    	adulte: $scope.newReservation.adulte,
+			enfant: $scope.newReservation.enfant,
+			brunch: $scope.newReservation.brunch
+		};
 		$scope.newReservation.nom = "";
 		$scope.newReservation.email = "";
 		$scope.newReservation.adulte = "";
 		$scope.newReservation.enfant = "";
 		$scope.newReservation.commentaire = "";
-		$("#rsvp").hide();
-		$("#sendYou").show();
+		$.ajax({
+				type: "POST",
+				url: "send.php",
+				data: data,
+				success: function (result) {
+
+					$("#reserv").hide();
+
+					$("#leresult").html(result);
+					$("#sendYou").show();
+					$("#sendYou").css({'height' : '600px'});
+
+
+				}
+		});
+
 	};
 	//EDIT
 	$scope.editReservation = function(reserv){
